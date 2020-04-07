@@ -17,6 +17,14 @@ Rails.application.routes.draw do
         get   :sign_out
       end
     end
-
   end
+
+  root to: "welcome#index"
+  scope controller: :welcome do 
+    get   :index
+    post  :set_locale
+  end
+
+  get '/topics/:slug', to: 'welcome#topic', trailing_slash: true  
+
 end
