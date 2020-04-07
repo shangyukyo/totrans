@@ -1,0 +1,29 @@
+.container.form-container
+  = form_for @contact, url: "/admin/contacts/#{@contact.id}"
+    .form-group
+      label 联系邮箱
+      = text_field_tag :email, @contact&.email, class: 'form-control', placeholder: 'email'
+
+    .form-group
+      label 客服支持邮箱
+      = text_field_tag :support_email, @contact&.support_email, class: 'form-control', placeholder: 'support_email'
+
+    .form-group
+      label 空运联系电话
+      = text_field_tag :air_transpot_phone, @contact&.air_transpot_phone, class: 'form-control', placeholder: 'air_transpot_phone'
+      
+    .form-group
+      label 海运联系电话
+      = text_field_tag :shipping_phone, @contact&.shipping_phone, class: 'form-control', placeholder: 'shipping_phone'
+
+    .form-group
+      label 快递包裹联系电话
+      = text_field_tag :customer_service_phone, @contact&.customer_service_phone, class: 'form-control', placeholder: 'customer_service_phone'
+
+    .form-group
+      label 联系地址
+      = text_field_tag :address_1, @contact&.address_1, class: 'form-control', placeholder: 'address'
+                        
+
+    .form-group
+      button.btn.btn-primary type="submit" 保存

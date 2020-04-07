@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :contacts 
+
     resources :session, only: [] do 
       collection do 
         get   :login
