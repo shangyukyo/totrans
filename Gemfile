@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # bootstrap
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 
 #datetimepicker
 gem 'momentjs-rails', '>= 2.9.0'
