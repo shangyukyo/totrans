@@ -1,0 +1,34 @@
+.container-fluid
+  a.btn.btn-secondary href="#{new_admin_topic_path}"
+    i.fas.fa-pencil-alt
+    span.ml-1 新建文章
+
+.container-fluid.mt-2
+  table.table.table-bordered
+    thead.thead-light
+      tr        
+        th 作者
+        th 标题        
+        th 简介
+        th 创建时间
+        th #    
+
+    tbody
+      - if !@topics.present?
+        tr
+          td colspan=5
+            | 没有数据
+      - else
+        - @topics.each do |topic|
+          - admin_user = topic.admin_user
+
+          tr
+            td= topic.admin_user&.login
+            td
+              = topic.title
+            td= topic.seo_description          
+            td= topic.created_at.strftime("%F %T")
+            td
+              a href="#{edit_admin_topic_path(topic)}" 编辑             
+
+  = will_paginate(@topics, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)          

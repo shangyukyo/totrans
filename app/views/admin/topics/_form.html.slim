@@ -1,0 +1,40 @@
+= content_for :assets do 
+  = javascript_include_tag 'admin/topics/new'
+
+.container.form-container
+  = form_for @topic, url: "/admin/topics/#{@topic.id}"
+    .form-group
+      label 标题
+      = text_field_tag :title, @topic&.title, class: 'form-control', placeholder: 'title'
+
+    .form-group
+      label URL SLUG
+      = text_field_tag :slug, @topic&.slug,  class: 'form-control', placeholder: 'slug'
+      .text-muted 留空则为标题汉语全拼
+
+    .form-group
+      label 排序值
+      = number_field_tag :sort_number, @topic&.sort_number, class: 'form-control', placeholder: 'sort number'
+      .text-muted 值越小排位越靠前,默认为0
+
+    .form-group
+      label 内容
+      = text_area_tag :body, @topic&.body, class: 'form-control simditor'
+
+    .form-group
+      label Seo Title
+      = text_field_tag :seo_title, @topic&.seo_title,  class: 'form-control', placeholder: 'seo title'
+
+    .form-group
+      label Seo Keywords
+      = text_field_tag :seo_keywords, @topic&.seo_keywords,  class: 'form-control', placeholder: 'seo keywords'      
+      .text-muted 用英文或中文逗号隔开
+
+    .form-group
+      label Seo Description
+      = text_area_tag :seo_description, @topic&.seo_description, class: 'form-control'
+
+      .text-muted 用英文逗号隔开
+
+    .form-group
+      button.btn.btn-primary type="submit" 保存

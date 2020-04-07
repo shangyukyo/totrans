@@ -15,5 +15,8 @@ module Totrans
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.eager_load_paths += ["#{config.root}/lib"]
+    config.i18n.available_locales = ['zh-CN', :zh, :en]
+    config.i18n.default_locale = 'zh-CN'    
   end
 end

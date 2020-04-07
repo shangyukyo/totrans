@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html
+  head
+    title Totrans
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag 'admin/login', media: 'all', 'data-turbolinks-track': 'reload'
+
+  body.text-center
+    = form_tag url_for, method: 'post', class: 'form-signin mt-5' do 
+
+      = image_tag 'logo.png', size: '115x39', class: 'mb-5'
+      - if flash[:alert]
+        .alert.alert-danger
+          = flash[:alert]    
+      input.form-control.form-control-lg type="text" placeholder="Account" required="required" name="username"
+
+      input.form-control.form-control-lg type="password" placeholder="Password" required="required" name="password"
+
+      button.btn.btn-lg.btn-outline-secondary.btn-block.mt-5 type="submit"
+        | Sign in
