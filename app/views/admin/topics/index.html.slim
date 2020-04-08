@@ -30,6 +30,6 @@
             td= topic.created_at.strftime("%F %T")
             td
               a href="#{edit_admin_topic_path(topic)}" 编辑 
-              a.ml-2 href="#{delete_admin_topic_path}" 删除            
+              a.ml-2 onclick="return confirm('确定要删除?')" href="#{delete_admin_topic_path(topic)}" 删除            
 
   = will_paginate(@topics, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)          

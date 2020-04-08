@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       end
 
       member do 
-        post :delete
+        get :delete
       end
     end
 
