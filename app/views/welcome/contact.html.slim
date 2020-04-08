@@ -1,0 +1,45 @@
+section.sub-baner.sub-baner-bg1
+  .container
+    h3= I18n.t("contact_us")
+    ol.breadcrumb
+      li
+        a href=root_path
+          = I18n.t("index")
+      li.active= I18n.t("contact_us")
+#content
+  section.contact-us.padding-top-50.padding-bottom-100
+    .container
+      .row
+        .col-md-12
+          .contat-info
+            - contact = Contact.first
+            ul
+              li
+                i.fa.fa-phone
+                h6= I18n.t('air_freight_phone')
+                h3
+                  span= contact.air_transpot_phone.split(/\s/).first
+                  = contact.air_transpot_phone.split(/\s/).last
+              li
+                i.fa.fa-phone
+                h6 海运联系
+                h3
+                  span= contact.shipping_phone.split(/\s/).first
+                  = contact.shipping_phone.split(/\s/).last
+              li
+                i.fa.fa-phone
+                h6= I18n.t('express_phone')
+                h3
+                  span= contact.customer_service_phone.split(/\s/).first
+                  = contact.customer_service_phone.split(/\s/).last
+              li
+                i.fa.fa-envelope
+                h6= I18n.t("consultation_and_suggestion")
+                h3
+                  a href="mailto:#{contact.email}"
+                    = contact.email
+            ul
+              li
+                i.fa.fa-home
+                h6.padding-top-24 leuvensesteenweg 510. building 2.
+  section.map-block

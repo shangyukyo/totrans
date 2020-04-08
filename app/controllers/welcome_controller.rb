@@ -5,8 +5,17 @@ class WelcomeController < ApplicationController
     cookies[:locale] = I18n.locale    
   end
 
-  def topic    
-    @topic = Topic.find_by_slug params[:slug]
+  def blog    
+    @blog = Topic.find_by_slug params[:slug]
   end
 
+  def blogs
+    @blogs = Topic.all
+    if params[:month].present?
+      month, year = params[:month].split("月")
+      date = Time.mktime(year, month)
+      @blogs = @blogs.where("created_at > ? and created_at < ?", date.at_beginning_of_month, date.end_of_month)
+    end
+    @blogs = @blogs.paginate(page: params[:page], per_page: 15)
+  end
 end

@@ -24,9 +24,15 @@ Rails.application.routes.draw do
   root to: "welcome#index"
   scope controller: :welcome do 
     get   :index
+    get   :international
+    get   :express
+    get   :customs_clearance
+    get   :european_warehousing
+    get   :blogs
+    get   :contact
     post  :set_locale
   end
 
-  get '/topics/:slug', to: 'welcome#topic', trailing_slash: true  
+  get '/blog/:slug', to: 'welcome#blog', trailing_slash: true, as: 'blog'
 
 end

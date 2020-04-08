@@ -1,0 +1,34 @@
+section.sub-baner.sub-baner-bg1
+  .container
+    h3= I18n.t('news')
+    ol.breadcrumb
+      li
+        a href=root_path
+          = I18n.t('index')
+      li.active= I18n.t('news')
+#content
+  section.padding-top-100.padding-bottom-100
+    .container
+      .row
+        .col-md-8
+          .blog-list
+            - @blogs.each do |blog|
+              article.blog-post
+                .post-info
+                  a.post-tittle href=blog_path(slug: blog.slug)
+                    = blog.title
+                  p
+                    = blog.seo_description
+                  span.news_times.margin-top-10.margin-bottom-10
+                    = blog.created_at.strftime("%m月%d, %Y")
+
+        .col-md-4
+          .sidebar
+            h6 发布时间
+            - months = Topic.order('created_at DESC').group_by { |m| m.created_at.strftime("%m月 %Y") }.keys
+            ul.cate.archive
+              - months.each do |month|
+                li
+                  a href=blogs_path(month: month)
+                    = month
+

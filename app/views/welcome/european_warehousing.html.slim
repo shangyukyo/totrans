@@ -1,0 +1,18 @@
+section.sub-baner.sub-baner-bg2
+  .container
+    h3 欧洲仓储
+    ol.breadcrumb
+      li
+        a href=root_path
+          = I18n.t('index')
+      li.active
+        = I18n.t('european_warehousing')
+#content
+  section.power-hosting.padding-top-100.padding-bottom-100
+    .container
+      .row
+        .col-md-7          
+          = image_tag "storage.jpg"
+        .col-md-5
+          p
+            = I18n.t("european_warehousing_intro")

@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 html
-  head
-    title Totrans
+  head lang="en"
+    title 通转欧洲TOTRANS LOGISTICS
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
     = csrf_meta_tags
-    = csp_meta_tag
-    
+    = csp_meta_tag    
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'responsive'
+    = stylesheet_link_tag    'style'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    #wrap
+      .top-bar
+        .container
+          .social= I18n.t('title')
+          .pull-right
+            ul.login-info
+              li
+                select.selectpicker name="locale"
+                  - if I18n.locale.to_s == 'en'
+                    option selected="selected" value="en" ENG
+                    option value="zh-CN" 中文
+                  - else
+                    option value="en" ENG
+                    option selected="selected" value="zh-CN" 中文                  
+
+      header
+        .sticky
+          .container
+            .logo
+              a href=root_path 
+                = image_tag 'logo.png', class: 'img-responsive'
+            nav.navbar
+              ul.nav.ownmenu
+                li class="#{action_name == 'index' ? 'active' :nil}"
+                  a href=root_path
+                    = I18n.t('index')
+                li class="#{action_name == 'international' ? 'active' :nil}"
+                  a href=international_path
+                    = I18n.t('international_logistic')
+                li
+                  a href="https://www.junanex.eu" target="_blank"
+                    = I18n.t("express_package")
+                li class="#{action_name == 'customs_clearance' ? 'active' :nil}"
+                  a href=customs_clearance_path
+                    = I18n.t("customs_clearance_service")
+                li class="#{action_name == 'european_warehousing' ? 'active' :nil}"
+                  a href=european_warehousing_path
+                    = I18n.t("european_warehousing")
+                li class="#{action_name == 'blogs' ? 'active' :nil}"
+                  a href=blogs_path
+                    = I18n.t("news")
+                li class="#{action_name == 'contact' ? 'active' :nil}"
+                  a href=contact_path
+                    = I18n.t("contact_us")
+
+      = yield
+
+      - contact = Contact.first
+      footer
+        .container
+          .col-md-5
+            h6 Contact
+            ul.personl-info
+              li
+                .media-left.icons
+                  i.fa.fa-home
+                .media-body
+                  p.margin-top-20
+                    = contact.address_1
+              li
+                .media-left.icons
+                  i.fa.fa-support
+                .media-body
+                  a href="mailto:#{contact.support_email}"
+                    = contact.support_email
+              li
+                .media-left.icons
+                  i.fa.fa-envelope-o
+                .media-body
+                  a href="mailto:#{contact.email}"
+                    = contact.email
+          .col-md-7
+            h6 Our Services
+            ul.service-link.row
+              li
+                a href=international_path
+                  i.fa.fa-angle-right aria-hidden="true" 
+                  = I18n.t("air_freight_service")
+              li
+                a href=international_path
+                  i.fa.fa-angle-right aria-hidden="true" 
+                  = I18n.t("shipping_service")
+              li
+                a href=international_path
+                  i.fa.fa-angle-right aria-hidden="true" 
+                  = I18n.t("land_transportation_service")
+              li
+                a href="https://www.junanex.eu" target="_blank" 
+                  i.fa.fa-angle-right aria-hidden="true" 
+                  = I18n.t("express_package")
+              li
+                a href=customs_clearance_path
+                  i.fa.fa-angle-right aria-hidden="true" 
+                  = I18n.t("customs_clearance_service")
+              li
+                a href=european_warehousing_path
+                  i.fa.fa-angle-right aria-hidden="true" 
+                  = I18n.t("european_warehousing")
+      .rights
+        p Copyright &copy; 2020.Totrans All rights reserved.
+

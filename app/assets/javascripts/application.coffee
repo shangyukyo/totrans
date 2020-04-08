@@ -1,15 +1,16 @@
-#= require rails-ujs
-#= require activestorage
-#= require turbolinks
-#= require_tree .
+#= require jquery.min
+#= require bootstrap.min
+#= require own-menu
+#= require owl.carousel.min
+#= require main
 
 $(document).ready ->
-  $('a.set-locale').click ->
+  $('select[name=locale]').change ->
     $this = $(this)
     $.ajax
       type: 'post'
       url: '/set_locale'
-      data: { locale: $this.attr('locale') }
+      data: { locale: $this.val() }
       dataType: 'json'
       headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
       success: (rsp) ->        

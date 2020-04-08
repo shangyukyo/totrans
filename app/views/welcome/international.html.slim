@@ -1,0 +1,29 @@
+section.sub-baner.sub-baner-bg2
+  .container
+    h3= I18n.t('international_logistic')
+    ol.breadcrumb
+      li
+        a href=root_path
+          = I18n.t("index")
+      li.active= I18n.t('international_logistic')
+#content
+  section.power-hosting.padding-top-100.padding-bottom-100
+    .container
+      .heading.text-center
+        h5= I18n.t('provide_customers_intro')
+      ul.row
+        li.col-md-4
+          .icon
+            i.fa.fa-plane
+          h5= I18n.t("air_freight_service")
+          p= I18n.t("bulk_cargo_and_pallets_and_charter")
+        li.col-md-4
+          .icon
+            i.fa.fa-ship
+          h5= I18n.t("shipping_service")
+          p= I18n.t("shipping_service_intro")
+        li.col-md-4
+          .icon
+            i.fa.fa-truck
+          h5= I18n.t("land_transportation_service")
+          p= I18n.t("land_transportation_service_intro")

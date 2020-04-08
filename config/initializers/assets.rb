@@ -16,4 +16,7 @@ Rails.application.config.assets.precompile += %w(
   admin/base.css
   admin/base.js
   admin/topics/new.js
+
+  responsive.css
+  style.css
 )

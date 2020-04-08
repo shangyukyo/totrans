@@ -1,0 +1,24 @@
+section.sub-baner.sub-baner-bg3
+  .container
+    h3= I18n.t('customs_clearance_service')
+    ol.breadcrumb
+      li
+        a href=root_path
+          = I18n.t('index')
+      li.active= I18n.t('customs_clearance_service')
+#content
+  section.power-hosting.padding-top-100.padding-bottom-100
+    .container
+      ul.row
+        li.col-md-4
+          .icon
+            i.fa.fa-university
+          h5= I18n.t('general_trade_clearance')
+        li.col-md-4
+          .icon
+            i.fa.fa-archive
+          h5= I18n.t("customs_clearance")
+        li.col-md-4
+          .icon
+            i.fa.fa-sign-out
+          h5= I18n.t("low_value_added_tax_free_customs_clearance")
