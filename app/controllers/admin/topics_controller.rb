@@ -1,5 +1,5 @@
 class Admin::TopicsController < Admin::BaseController 
-  before_action :find_topic, only: [:edit, :update, :show]
+  before_action :find_topic, only: [:edit, :update, :show, :delete]
   
   def index 
     @topics = Topic      
@@ -22,6 +22,11 @@ class Admin::TopicsController < Admin::BaseController
 
   def update    
     @topic.update_attributes!(topic_params)
+    redirect_to admin_root_path    
+  end
+
+  def delete
+    @topic.destroy
     redirect_to admin_root_path    
   end
 

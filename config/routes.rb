@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       collection do 
         post :upload
       end
+
+      member do 
+        post :delete
+      end
     end
 
     resources :contacts 
