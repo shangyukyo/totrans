@@ -44,7 +44,7 @@ section.boxes-intro
           - topics.each do |topic|
             li.col-md-4
               h5.padding-left-10.padding-right-10
-                a href="blog-detail.html"
+                a href=blog_path(slug: topic.slug)
                   = topic.title
               p.padding-left-10.padding-right-10
                 = topic.seo_description.truncate(60)

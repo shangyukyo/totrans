@@ -1,0 +1,27 @@
+.container-fluid
+  a.btn.btn-secondary href="#{new_admin_user_path}"
+    i.fas.fa-pencil-alt
+    span.ml-1 新建用户
+
+.container-fluid.mt-2
+  table.table.table-bordered
+    thead.thead-light
+      tr        
+        th 登录名
+        th 创建时间
+        th #    
+
+    tbody
+      - if !@users.present?
+        tr
+          td colspan=5
+            | 没有数据
+      - else
+        - @users.each do |user|
+          tr
+            td= user.login     
+            td= user.created_at.strftime("%F %T")
+            td              
+              a onclick="return confirm('确定要删除?')" href="#{delete_admin_user_path(user)}" 删除            
+
+  = will_paginate(@users, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)          

@@ -15,6 +15,11 @@ Rails.application.routes.draw do
     end
 
     resources :contacts 
+    resources :users do 
+      member do 
+        get :delete
+      end
+    end
 
     resources :session, only: [] do 
       collection do 
