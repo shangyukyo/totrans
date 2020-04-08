@@ -411,12 +411,12 @@ section {
   background: none;
 }
 .bg-slide-1 {
-  background: url("sub-bnr-img.jpg") no-repeat;
+  background: url("/sub-bnr-img.jpg") no-repeat;
   background-size: cover;
   min-height: 675px;
 }
 .bg-slide-2 {
-  background: url('sub-bnr-img-1.jpg') no-repeat;
+  background: url('/sub-bnr-img-1.jpg') no-repeat;
   background-size: cover;
   min-height: 675px;
 }
@@ -660,13 +660,13 @@ header .is-sticky .sticky li.active a:before {
   bottom: -10px;
 }
 .sub-baner-bg1{
-  background: url("img-small-brn.jpg") center center fixed no-repeat;
+  background: url("/img-small-brn.jpg") center center fixed no-repeat;
 }
 .sub-baner-bg2{
-  background: url("img-small-brn1.jpg") center center fixed no-repeat;
+  background: url("/img-small-brn1.jpg") center center fixed no-repeat;
 }
 .sub-baner-bg3{
-  background: url("img-small-brn2.jpg") center center fixed no-repeat;
+  background: url("/img-small-brn2.jpg") center center fixed no-repeat;
 }
 .sub-baner {
   background-size: cover;
@@ -889,12 +889,12 @@ article.blog-post {
   background: none;
 }
 .bg-slide-1 {
-  background: url('sub-bnr-img.jpg') no-repeat;
+  background: url('/sub-bnr-img.jpg') no-repeat;
   background-size: cover;
   min-height: 675px;
 }
 .bg-slide-2 {
-  background: url('sub-bnr-img-1.jpg') no-repeat;
+  background: url('/sub-bnr-img-1.jpg') no-repeat;
   background-size: cover;
   min-height: 675px;
 }
@@ -1116,7 +1116,7 @@ footer p {
   line-height: 24px;
 }
 .map-block{
-  background: url("map.jpg") no-repeat center center;
+  background: url("/map.jpg") no-repeat center center;
   height: 412px;
 }
 footer h6 {
@@ -1186,7 +1186,7 @@ footer .service-link li a:hover {
 }
 .rights.tri-white-top:before {
   top: -7px;
-  background: url("tri-promo-bottom-rights.png") repeat-x;
+  background: url("/tri-promo-bottom-rights.png") repeat-x;
 }
 .news_more{
   text-align: center;
