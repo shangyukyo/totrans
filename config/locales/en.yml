@@ -5,6 +5,7 @@ en:
   express_package: "EXPRESS PARCEL"
   customs_clearance_service: "CUSTOMS CLEARANCE"
   european_warehousing: "OVERSEAS WAREHOUSE"
+  header_european_warehousing: "WAREHOUSE"
   news: "NEWS"
   contact_us: "CONTACT"
   air_freight_service: "AIR FREIGHT"

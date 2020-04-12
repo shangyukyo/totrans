@@ -5,6 +5,7 @@
   express_package: "快递包裹"
   customs_clearance_service: "清关服务"
   european_warehousing: "欧洲仓储"
+  header_european_warehousing: "欧洲仓储"
   news: "新闻动态"
   contact_us: "联系我们"
   air_freight_service: "空运服务"
