@@ -435,24 +435,20 @@ section {
   width: 25%;
   min-height: 100px;
 }
+.boxes-intro li h5 {
+  font-size: 18px;
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 5px;
+  line-height: 30px;
+}
 .boxes-intro li i {
   color: #fff;
   top: 5px;
   display: inline-block;
   font-size: 36px;
   position: relative;
-  margin-right: 10px;
-}
-.boxes-intro .position-center-center {
-  width: 100%;
-}
-.boxes-intro li h5 {
-  font-size: 18px;
-  display: inline-block;
-  font-weight: bold;
-  color: #fff;
-  margin: 0px;
-  line-height: 30px;
 }
 .boxes-intro li:nth-child(2) {
   background: #429be6;
@@ -891,12 +887,12 @@ article.blog-post {
 .bg-slide-1 {
   background: url('/sub-bnr-img.jpg') no-repeat;
   background-size: cover;
-  min-height: 675px;
+  min-height: 460px;
 }
 .bg-slide-2 {
   background: url('/sub-bnr-img-1.jpg') no-repeat;
   background-size: cover;
-  min-height: 675px;
+  min-height: 460px;
 }
 .bnr-slide .owl-controls .owl-dots {
   text-align: center;
