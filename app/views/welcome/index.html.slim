@@ -38,13 +38,13 @@ section.boxes-intro
     .container
       .heading
         h2= I18n.t("totrans_updates")
-      - topics = Topic.first(3)
+      - topics = Topic.last(3)
       - if topics.any?
         ul.row
           - topics.each do |topic|
             li.col-md-4
               h5.padding-left-10.padding-right-10
-                a href=blog_path(slug: topic.slug)
+                a href=blog_path(slug: topic.slug) title="#{topic.title}"
                   = topic.title
               p.padding-left-10.padding-right-10
                 = topic.seo_description.truncate(60)
