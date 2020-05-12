@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
   end
 
   def blogs
-    @blogs = Topic.all
+    @blogs = Topic.order('id DESC')
     if params[:month].present?
       month, year = params[:month].split("月")
       date = Time.mktime(year, month)
