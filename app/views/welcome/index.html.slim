@@ -38,7 +38,7 @@ section.boxes-intro
     .container
       .heading
         h2= I18n.t("totrans_updates")
-      - topics = Topic.last(3)
+      - topics = Topic.order('id DESC').limit(3)
       - if topics.any?
         ul.row
           - topics.each do |topic|
