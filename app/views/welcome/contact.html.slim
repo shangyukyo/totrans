@@ -17,21 +17,19 @@ section.sub-baner.sub-baner-bg1
               li
                 i.fa.fa-phone
                 h6= I18n.t('air_freight_phone')
-                h3
-                  span= contact.air_transpot_phone.split(/\s/).first
-                  = contact.air_transpot_phone.split(/\s/).last
+                h6
+                  = contact.air_transpot_phone                  
               li
                 i.fa.fa-phone
                 h6 海运联系
-                h3
-                  span= contact.shipping_phone.split(/\s/).first
-                  = contact.shipping_phone.split(/\s/).last
+                h6
+                  = contact.shipping_phone
+                
               li
                 i.fa.fa-phone
                 h6= I18n.t('express_phone')
-                h3
-                  span= contact.customer_service_phone.split(/\s/).first
-                  = contact.customer_service_phone.split(/\s/).last
+                h6
+                  = contact.customer_service_phone                  
               li
                 i.fa.fa-envelope
                 h6= I18n.t("consultation_and_suggestion")
