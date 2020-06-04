@@ -20,7 +20,7 @@
             | 没有数据
       - else
         - @topics.each do |topic|
-          - next if !topic.present?
+        
           - admin_user = topic.admin_user
 
           tr
@@ -33,4 +33,4 @@
               //a href="#{edit_admin_topic_path(id: topic.id)}" 编辑 
               //a.ml-2 onclick="return confirm('确定要删除?')" href="#{delete_admin_topic_path(id: topic.id)}" 删除            
 
-  = will_paginate(@topics, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)          
+  //= will_paginate(@topics, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer)          
