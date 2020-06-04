@@ -4,7 +4,7 @@ class Admin::TopicsController < Admin::BaseController
   def index 
     @topics = Topic      
       .order('id desc')
-      .paginate(page: params[:page], per_page: 15)   
+      #.paginate(page: params[:page], per_page: 15)   
   end
 
   def new
