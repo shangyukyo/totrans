@@ -35,11 +35,15 @@ section.sub-baner.sub-baner-bg1
               li
                 i.fa.fa-envelope
                 h6= I18n.t("consultation_and_suggestion")
-                h3
+                h6
                   a href="mailto:#{contact.email}"
                     = contact.email
-            ul
+
               li
                 i.fa.fa-home
-                h6.padding-top-24= contact.address_1
+                h6.padding-top-24= contact.address_1                    
+            / ul
+            /   li
+            /     i.fa.fa-home
+            /     h6.padding-top-24= contact.address_1
   section.map-block
