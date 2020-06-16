@@ -9,10 +9,10 @@
       = text_field_tag :support_email, @contact&.support_email, class: 'form-control', placeholder: 'support_email'
 
     .form-group
-      label 空运联系电话
+      label 咨询电话
       = text_field_tag :air_transpot_phone, @contact&.air_transpot_phone, class: 'form-control', placeholder: 'air_transpot_phone'
       
-    .form-group
+    .form-group.sr-only
       label 海运联系电话
       = text_field_tag :shipping_phone, @contact&.shipping_phone, class: 'form-control', placeholder: 'shipping_phone'
 
