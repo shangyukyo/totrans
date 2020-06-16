@@ -1,3 +1,4 @@
+
 section.sub-baner.sub-baner-bg1
   .container
     h3= I18n.t("contact_us")
@@ -17,27 +18,31 @@ section.sub-baner.sub-baner-bg1
               - if contact.air_transpot_phone.present? 
                 li
                   i.fa.fa-phone
-                  h6= I18n.t('air_freight_phone')
-                  h6
-                    = contact.air_transpot_phone                  
+                  div style="padding: 15px;"
+                    h6= I18n.t('air_freight_phone')
+                    h6
+                      = contact.air_transpot_phone                  
               - if contact.shipping_phone.present? and false
                 li
                   i.fa.fa-phone
-                  h6 海运联系
-                  h6
-                    = contact.shipping_phone
+                  div style="padding: 15px;"
+                    h6 海运联系
+                    h6
+                      = contact.shipping_phone
               - if contact.customer_service_phone.present? 
                 li
                   i.fa.fa-phone
-                  h6= I18n.t('express_phone')
-                  h6
-                    = contact.customer_service_phone                  
+                  div style="padding: 15px;"
+                    h6= I18n.t('express_phone')
+                    h6
+                      = contact.customer_service_phone                  
               li
                 i.fa.fa-envelope
-                h6= I18n.t("consultation_and_suggestion")
-                h6
-                  a href="mailto:#{contact.email}"
-                    = contact.email
+                div style="padding: 15px;"
+                  h6= I18n.t("consultation_and_suggestion")
+                  h6
+                    a href="mailto:#{contact.email}"
+                      = contact.email
 
               li
                 i.fa.fa-home

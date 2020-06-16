@@ -717,7 +717,7 @@ header .is-sticky .sticky li.active a:before {
   margin-top: 50px;
 }
 .contat-info ul li {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 .contat-info ul li i {
   font-size: 48px;
